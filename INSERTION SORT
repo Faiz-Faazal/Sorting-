@@ -1,0 +1,40 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	cout << "--------------" << endl;
+	cout << "Muhammad Faiz" << endl << "2213225" << endl;
+	cout << "----------------" << endl;
+
+	int  temp, a;
+	
+	int arr[5] = { 23,1,67,21,12 };
+	for (int i = 0; i < 5; i++)
+	{
+		cout << arr[i];
+	}
+	for (int i = 0; i < 5; i++)
+	{
+		temp = arr[i];
+		a = (i - 1);
+		while (a >= 0 && arr[a] > temp)
+		{
+			arr[a + 1] = arr[a];
+			a--;
+		}
+		arr[a + 1] = temp;
+		cout << "step by step sorting" << "\n";
+		for (int k = 0; k < 5; k++)
+		{
+			cout << arr[k] << "\n";
+		}
+
+	}
+	cout << "sorted array:" << endl;
+	for (int i = 0; i < 5; i++)
+	{
+		cout << arr[i] << "\n";
+	}
+	return 0;
+
+}
